@@ -23,7 +23,7 @@ describe "Static pages" do
 	  end
 	  
 	  it "should have a right title" do
-	    visit '/static_pages/home'
+	    visit '/static_pages/help'
 	    page.should have_selector('title',
 				     text: "Help and Support | Luxury Builder Directory")
     end
@@ -36,7 +36,7 @@ describe "Static pages" do
 	  end
 	  
 	  it "should have a right title" do
-	    visit '/static_pages/home'
+	    visit '/static_pages/about'
 	    page.should have_selector('title',
 				     text: "About | Luxury Builder Directory")
     end
@@ -44,12 +44,12 @@ describe "Static pages" do
 
     describe "Contact page" do
 	  it "should have the content 'Contact Luxury Builder Directory'" do
-		  visit '/static_pages/about'
+		  visit '/static_pages/contact'
 		  page.should have_selector('h1', text: 'Contact Luxury Builder Directory')
 	  end
 	  
 	  it "should have a right title" do
-	    visit '/static_pages/home'
+	    visit '/static_pages/contact'
 	    page.should have_selector('title',
 				     text: "Contact | Luxury Builder Directory")
     end
