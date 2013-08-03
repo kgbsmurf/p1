@@ -4,8 +4,16 @@ describe "Static pages" do
   describe "Home page" do
     it "should have the content 'Luxury Builder Directory'" do
 	    visit '/static_pages/home'
-	    page.should have_content('Luxury Builder Directory')
+	    page.should have_selector('h1',
+				     text: 'Luxury Builder Directory')
     end
+
+    it "should have a right title" do
+	    visit '/static_pages/home'
+	    page.should have_selector('title',
+				     text: "Home | Luxury Builder Directory")
+    end
+
   end
 
   describe "Help page" do
