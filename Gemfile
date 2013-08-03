@@ -5,11 +5,6 @@ gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
 
-group :development do
-	gem 'mysql2'
-end
-
-
 
 group :assets do
 	# Use SCSS for stylesheets
@@ -24,7 +19,7 @@ end
 
 #gem 'cucumber-rails'
 
-group :test do
+group :test, :development do
 	gem 'cucumber-rails', :require => false
 	gem 'mysql2'
 	gem 'capybara'
