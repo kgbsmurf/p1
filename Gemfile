@@ -4,7 +4,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+
+group :development do
+	gem 'mysql2'
+end
+
+
 
 group :assets do
 	# Use SCSS for stylesheets
@@ -21,10 +26,15 @@ end
 
 group :test do
 	gem 'cucumber-rails', :require => false
+	gem 'mysql2'
 	gem 'capybara'
 	gem 'rspec-rails'
 	gem 'database_cleaner'
 	gem 'debugger'
+end
+
+group :production do
+	gem 'pg'
 end
 
 
